@@ -34,7 +34,12 @@ function addH2 () {
     }
 }
 
-addInputButton.addEventListener("click", addH2);
+var inputValue = document.querySelector('input').value;
+
+if (inputValue) {
+
+    addInputButton.addEventListener("click", addH2);
+}
 
 // 3: Iedere button click moet er een p aangemaakt worden met dezelfde class. Later dit evt veranderen in een div waar een p en een button>img (deleteknop) in zitten. Eerst maar even kijken of dit lukt.
 
@@ -68,7 +73,7 @@ function makeList () {
     newListBin.setAttribute("class", "list_item_bin");
     newListBin.setAttribute("src", "./images/bin.svg");
     newListBin.setAttribute("alt", "Prullenbak");
-    listItemDiv.appendChild(newListBin);
+    newListDelete.appendChild(newListBin);
     }
 }
 
@@ -85,6 +90,24 @@ addInputButton.addEventListener("click", removeInput);
 
 // 6: Klikken op deleteknop moet de hele newList verwijderen (remove parent?)
 
-var listDelete = document.querySelector(".list_item_delete");
+// var listDelete = document.querySelector(".list_item_delete");
+
+// function deleteListItem (button) {
+//     var parent = button.parentNode;
+//     var grandFather = parent.parentNode;
+//     grandFather.removeChild(parent);
+// }
+
+// listDelete.addEventListener("click", deleteListItem);
 
 // listDelete.addEventListener("click", ??);
+
+var elements = document.getElementsByClassName("list_item_delete");
+
+function deleteListItem (button) {
+    document.body.removeChild(this.parentNode);
+}
+
+for (var i=0; i < elements.length; i++) {
+    elements[i].addEventListener("click", deleteListItem, false);
+}
