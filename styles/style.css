@@ -33,11 +33,24 @@ body {
     background-color: var(--black);
     width: 100vw;
     height: 632px;
-    overflow-y: hidden;
 }
 
 a {
     all: unset;
+}
+
+ul li {
+    all: unset;
+}
+
+.invisible {
+    display: none;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 /* HOME */
@@ -53,9 +66,8 @@ header.home {
     color: var(--white);
 }
 
-main {
-    display: flex;
-    flex-direction: column;
+.main_home {
+    gap: 2em;
 }
 
 main h1 {
@@ -65,7 +77,6 @@ main h1 {
 }
 
 div.div {
-    margin-bottom: 2em;
     display: flex;
     flex-direction: column;
 }
@@ -113,10 +124,10 @@ input:-moz-placeholder {
     font-weight: 300;
 }
 
-.buttons_home {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
+.empty_state_p {
+    color: var(--white);
+    font-weight: 200;
+    font-size: 1.1em;
 }
 
 button {
@@ -127,18 +138,25 @@ button {
     width: fit-content;
 }
 
-.primair_1 {
-    background-color: var(--white);
-    color: var(--purple);
+.home_button {
     padding: 1em;
     font-size: 1.4em;
     font-weight: 700;
     text-transform: uppercase;
-    width: fit-content;
+}
+
+.primair_1 {
+    background-color: var(--purple);
+    color: var(--white);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1em;
 }
 
 .secundair_1 {
-    color: var(--white);
+    background-color: var(--orange);
+    color: var(--black);
+    width: fit-content;
 }
 
 /* Javascript elementen na 'Voer nog iets in' click */
@@ -146,18 +164,12 @@ button {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    margin-bottom: 2em;
 }
 
-.invisible {
-    display: none;
-}
-
-.list_h2 {
+.list_h2, .h2_test {
     color: var(--white);
     font-weight: 700;
     font-size: 1.3em;
-    margin-bottom: .2em;
 }
 
 .list_item_div {

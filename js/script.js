@@ -27,12 +27,11 @@ var addInputButton = document.querySelector('.add_input');
 
 // addInputButton.disabled = true;
 
-function checkValue () {
+function checkValue() {
     var input = document.querySelector('input');
     if (input.value == '') {
         addInputButton.disabled = true;
-    }
-    else {
+    } else {
         addInputButton.disabled = false;
     }
 }
@@ -41,18 +40,18 @@ function checkValue () {
 
 addInputButton.addEventListener("click", checkValue);
 
-function addH2() {
-    var H2 = document.querySelector(".invisible");
+function removeEmptyState() {
+    var emptyState = document.querySelector(".empty_state_p");
 
-    if (H2.hasAttribute("class", "invisible")) {
-        H2.removeAttribute("class", "invisible");
-        H2.setAttribute("class", "list_h2");
+    var inputValue = document.querySelector('input').value;
+
+    if (inputValue) {
+
+    emptyState.setAttribute("class", "invisible");
     }
 }
 
-var inputValue = document.querySelector('input').value;
-
-addInputButton.addEventListener("click", addH2);
+addInputButton.addEventListener("click", removeEmptyState);
 
 
 // 3: Iedere button click moet er een p aangemaakt worden met dezelfde class. Later dit evt veranderen in een div waar een p en een button>img (deleteknop) in zitten. Eerst maar even kijken of dit lukt.
@@ -70,11 +69,11 @@ function makeList() {
     if (inputValue) {
 
         // Create new div for p and button>img
-        var listItemDiv = document.createElement("div");
+        var listItemDiv = document.createElement("ul");
         listItemDiv.setAttribute("class", "list_item_div");
         listDiv.appendChild(listItemDiv);
 
-        var newListP = document.createElement("p");
+        var newListP = document.createElement("li");
         newListP.textContent = inputValue;
         newListP.setAttribute("class", "list_item_p");
         listItemDiv.appendChild(newListP);
