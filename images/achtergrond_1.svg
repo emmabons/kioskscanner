@@ -1,14 +1,14 @@
-<svg width="390" height="800" viewBox="0 0 390 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="390" height="664" viewBox="0 0 390 664" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_185_236)">
-<rect width="390" height="800" fill="black"/>
-<circle cx="195" cy="805" r="75" fill="#FFA101"/>
-<circle cx="154" cy="603" r="60" fill="#FFA101"/>
-<circle cx="94" cy="453" r="45" fill="#FFA101"/>
-<circle cx="19" cy="353" r="30" fill="#FFA101"/>
+<rect width="390" height="664" fill="black"/>
+<circle cx="217" cy="646" r="64" fill="#FFA101"/>
+<circle cx="153" cy="474" r="51" fill="#FFA101"/>
+<ellipse cx="80.5" cy="355" rx="38.5" ry="38" fill="#FFA101"/>
+<circle cx="4.5" cy="263.5" r="25.5" fill="#FFA101"/>
 </g>
 <defs>
 <clipPath id="clip0_185_236">
-<rect width="390" height="800" fill="white"/>
+<rect width="390" height="664" fill="white"/>
 </clipPath>
 </defs>
 </svg>

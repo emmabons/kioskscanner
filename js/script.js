@@ -25,8 +25,24 @@ var addInputButton = document.querySelector('.add_input');
 
 // 2: De eerste keer moet er een h2 worden aangemaakt met de tekst: 'Op je lijstje'. Deze misschien al in html zetten en zichtbaar maken bij button click?
 
-function addH2 () {
-    var H2 = document.querySelector(".h2");
+// addInputButton.disabled = true;
+
+function checkValue () {
+    var input = document.querySelector('input');
+    if (input.value == '') {
+        addInputButton.disabled = true;
+    }
+    else {
+        addInputButton.disabled = false;
+    }
+}
+
+// Deze functie werkt niet?
+
+addInputButton.addEventListener("click", checkValue);
+
+function addH2() {
+    var H2 = document.querySelector(".invisible");
 
     if (H2.hasAttribute("class", "invisible")) {
         H2.removeAttribute("class", "invisible");
@@ -36,10 +52,8 @@ function addH2 () {
 
 var inputValue = document.querySelector('input').value;
 
-if (inputValue) {
+addInputButton.addEventListener("click", addH2);
 
-    addInputButton.addEventListener("click", addH2);
-}
 
 // 3: Iedere button click moet er een p aangemaakt worden met dezelfde class. Later dit evt veranderen in een div waar een p en een button>img (deleteknop) in zitten. Eerst maar even kijken of dit lukt.
 
@@ -49,31 +63,34 @@ if (inputValue) {
 
 var listDiv = document.querySelector('.list_div');
 
-function makeList () {
+function makeList() {
     // input Value Button
     var inputValue = document.querySelector('input').value;
 
     if (inputValue) {
 
-    // Create new div for p and button>img
-    var listItemDiv = document.createElement("div");
-    listItemDiv.setAttribute("class", "list_item_div");
-    listDiv.appendChild(listItemDiv);
+        // Create new div for p and button>img
+        var listItemDiv = document.createElement("div");
+        listItemDiv.setAttribute("class", "list_item_div");
+        listDiv.appendChild(listItemDiv);
 
-    var newListP =  document.createElement("p");
-    newListP.textContent = inputValue;
-    newListP.setAttribute("class", "list_item_p");
-    listItemDiv.appendChild(newListP);
+        var newListP = document.createElement("p");
+        newListP.textContent = inputValue;
+        newListP.setAttribute("class", "list_item_p");
+        listItemDiv.appendChild(newListP);
 
-    var newListDelete =  document.createElement("button");
-    newListDelete.setAttribute("class", "list_item_delete");
-    listItemDiv.appendChild(newListDelete);
+        var newListDelete = document.createElement("button");
+        newListDelete.setAttribute("class", "list_item_delete");
+        listItemDiv.appendChild(newListDelete);
 
-    var newListBin = document.createElement("img");
-    newListBin.setAttribute("class", "list_item_bin");
-    newListBin.setAttribute("src", "./images/bin.svg");
-    newListBin.setAttribute("alt", "Prullenbak");
-    newListDelete.appendChild(newListBin);
+        var newListBin = document.createElement("img");
+        newListBin.setAttribute("class", "list_item_bin");
+        newListBin.setAttribute("src", "./images/bin.svg");
+        newListBin.setAttribute("alt", "Prullenbak");
+        newListDelete.appendChild(newListBin);
+
+        newListBin.addEventListener("click", () => deleteListItem(listItemDiv));
+
     }
 }
 
@@ -81,7 +98,7 @@ addInputButton.addEventListener("click", makeList);
 
 // 5: Het input field moet weer worden geleegd.
 
-function removeInput () {
+function removeInput() {
     var input = document.querySelector('input');
     input.value = '';
 }
@@ -102,12 +119,16 @@ addInputButton.addEventListener("click", removeInput);
 
 // listDelete.addEventListener("click", ??);
 
-var elements = document.getElementsByClassName("list_item_delete");
+// var elements = document.getElementsByClassName("list_item_delete");
 
-function deleteListItem (button) {
-    document.body.removeChild(this.parentNode);
-}
+// function deleteListItem (button) {
+//     document.body.removeChild(this.parentNode);
+// }
 
-for (var i=0; i < elements.length; i++) {
-    elements[i].addEventListener("click", deleteListItem, false);
+// for (var i=0; i < elements.length; i++) {
+//     elements[i].addEventListener("click", deleteListItem, false);
+// }
+
+function deleteListItem(el) {
+    el.remove();
 }
