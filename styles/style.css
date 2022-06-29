@@ -146,16 +146,16 @@ button {
 }
 
 .primair_1 {
-    background-color: var(--purple);
-    color: var(--white);
+    background-color: var(--orange);
+    color: var(--black);
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 1em;
 }
 
 .secundair_1 {
-    background-color: var(--orange);
-    color: var(--black);
+    background-color: var(--white);
+    color: var(--purple);
     width: fit-content;
 }
 
