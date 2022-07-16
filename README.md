@@ -10,4 +10,4 @@ We made use of the fact that this person can still see a little bit. This makes 
 
 ---
 
-You can access the prototype [right here](emmabons.github.io/kioskscanner). Make sure you watch it on a mobile device, as it was not designed to be used by a desktop device. Make some time to test it with your eyes closed, and the screanreader on your phone turned on to fully experience the app in the way it was designed.
+You can access the prototype [right here](https://emmabons.github.io/kioskscanner/). Make sure you watch it on a mobile device, as it was not designed to be used by a desktop device. Make some time to test it with your eyes closed, and the screanreader on your phone turned on to fully experience the app in the way it was designed.
