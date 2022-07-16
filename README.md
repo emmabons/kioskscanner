@@ -16,7 +16,7 @@ So we designed our concept with the Kiosk in mind. This is a small supermarket t
 
 For this concept to be realised, we thought of putting maps of the Kiosks in the backend of this app. In combination with a database of their products, the app should be able to work properly. Because this was a school project, we only came as far as this prototype. But I think if this app could be realised, it could make an immense difference in a lot of peoples lives, as they would become more independent, giving them more confidence in life, and more joy in doing groceries.
 
-For the sake of this project, the concept is designed exclusively for Julie, using her favorite colors and humor and designing contrasts that are most useful to her. Essentially, it could be used by people with little to no visual disability. Because let's be honest, finding products in the supermarket isn't always a hoot.
+For the sake of this project, the concept is designed exclusively for Julie, using her favorite colors and humor and designing contrasts that are most useful to her. Essentially, it could be designer for and used by people with little to no visual disability. Because let's be honest, finding products in the supermarket isn't always a hoot.
 
 ---
 
