@@ -204,6 +204,12 @@ footer p {
     align-self: flex-end;
 }
 
+.small_text {
+    font-size: .7em;
+    display: block;
+    margin-top: .5em;
+}
+
 body.route {
     background-repeat: no-repeat;
     /* height: 100vh; */
